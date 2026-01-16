@@ -1,0 +1,23 @@
+
+[project]
+name = "rgb-under-cursor"
+version = "0.1.0"
+description = "Windows Tkinter utility showing RGB under cursor using GDI BitBlt + GetDIBits."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "Tomasz Zonenberg" }]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E203", "W503"]
+src = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
